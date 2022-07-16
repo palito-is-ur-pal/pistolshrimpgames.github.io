@@ -11,7 +11,7 @@ last_modified_date: 2022-05-23
 
 To start with, get the latest version of the Simple from <https://pistolshrimp.itch.io/simple>.
 
-Pick a directory to extract the zip file. It can live anywhere, but you are required to keep your content alongside the executables with the following structure:
+Pick a directory to extract the zip file. It can live anywhere (with a few caveats), but you are required to keep your content alongside the executables with the following structure:
 
 ```
 root directory
@@ -19,11 +19,13 @@ root directory
 |- game
    |- (content goes in here)
 ```
+It's recommended that you put Simple in the same drive as your `Temp` files as having them on a different drive can cause problems. Your `Temp` files will usually be where your `Users` directory is (this will be `C:\` unless you've changed this from the default).  
 
 The Simple zip file contains a few executables which serve different purposes. Just to outline them:
 - **simple.exe**: The Simple script editor, where you'll be working.
 - **viewer.exe**: The Simple viewer, which is used when running the simulation.
 - **trivial_signaling_server.exe**: A network peering server, optionally used when testing or playing multiplayer.
+- **content_installer.exe**: An executable that pulls the sample content from GitHub (Melee and the Test Sidescroller) and will put them in the game directory
 
 For now, you'll only need to worry about running **simple**, so let's start there.
 
@@ -46,7 +48,7 @@ Your Simulations window should now look like this, with the sim file added.
 
 A sim is just a container, so we need some ai files to actually create some gameplay.
 
-Add a new ai file by going to **File > New** and picking a place to put the ai file. Let's put it next to your sim file and name it the same as your sim, since we'll be using it to house the main component. Place the file at **game/sim/test_sim/test_sim.ai**.
+Add a new ai file by going to **File > New Script** and picking a place to put the ai file. Let's put it next to your sim file and name it the same as your sim, since we'll be using it to house the main component. Place the file at **game/sim/test_sim/test_sim.ai**.
 
 Your Simulations window should now look like this, with the simulation and ai included.
 
